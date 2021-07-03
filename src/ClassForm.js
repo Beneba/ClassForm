@@ -4,7 +4,7 @@ class classForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
+      username: "",
       email: "",
       password: "",
     };
@@ -15,11 +15,11 @@ class classForm extends Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
-    console.log(this.state);
+    // console.log(this.state);
   };
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submited");
+    console.log(this.state);
     this.setState = ({ username: "", email: "", password: "", })
   }
 
