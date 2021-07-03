@@ -20,6 +20,7 @@ class classForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log("submited");
+    this.setState = ({ username: "", email: "", password: "", })
   }
 
   render() {
@@ -32,8 +33,9 @@ class classForm extends Component {
           <input
             type="text"
             className="form-control"
-            onChange={this.handleChange}
-            value={this.state.name}
+            name= "username"
+            value={this.state.username}
+            onChange = {this.handleChange}
           />
         </div>
         <br />
@@ -44,8 +46,9 @@ class classForm extends Component {
           <input
             type="email"
             className="form-control"
-            onChange={this.handleChange}
+            name= "email"
             value={this.state.email}
+            onChange = {this.handleChange}
           />
         </div>
         <br />
@@ -56,8 +59,9 @@ class classForm extends Component {
           <input
             type="password"
             className="form-control"
-            onChange={this.handleChange}
+            name= "password"
             value={this.state.password}
+            onChange = {this.handleChange}
           />
         </div>
         <br />
@@ -67,7 +71,7 @@ class classForm extends Component {
             Check me out
           </label>
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" onSubmit = {this.handleSubmit}>
           Submit
         </button>
       </form>
